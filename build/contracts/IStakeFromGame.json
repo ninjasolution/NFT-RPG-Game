@@ -1,0 +1,520 @@
+{
+  "contractName": "IStakeFromGame",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "player",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "stakeFromGame",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "player",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "unstakeToGame",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.5+commit.f956cc89\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"player\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"stakeFromGame\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"player\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"unstakeToGame\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IStakeFromGame.sol\":\"IStakeFromGame\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IStakeFromGame.sol\":{\"keccak256\":\"0xe1a8b5492f5411a071e438f3f847ec24d41d5da12051c9ffcfe2f55a92125211\",\"urls\":[\"bzz-raw://de56817944b5fccd7039ac83719651f6a5e99889343b62c5c99df6deee7d6f6c\",\"dweb:/ipfs/QmehwiW5o15gqwzQRBP77vAeR3KzqnVAWJxcGe1hqsECz7\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.6.5;\n\ninterface IStakeFromGame {\n    function stakeFromGame(address player, uint256 amount) external;\n\n    function unstakeToGame(address player, uint256 amount) external;\n}\n",
+  "sourcePath": "D:\\Work\\MEVN\\cryptoblades-main\\cryptoblades-main\\contracts\\interfaces\\IStakeFromGame.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IStakeFromGame.sol",
+    "exportedSymbols": {
+      "IStakeFromGame": [
+        20128
+      ]
+    },
+    "id": 20129,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 20113,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".5"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:65"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 20128,
+        "linearizedBaseContracts": [
+          20128
+        ],
+        "name": "IStakeFromGame",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "668e0122",
+            "id": 20120,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "stakeFromGame",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 20118,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20115,
+                  "name": "player",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 20120,
+                  "src": "79:14:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 20114,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "79:7:65",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 20117,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 20120,
+                  "src": "95:14:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 20116,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "95:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "78:32:65"
+            },
+            "returnParameters": {
+              "id": 20119,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "119:0:65"
+            },
+            "scope": 20128,
+            "src": "56:64:65",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "accbc2f8",
+            "id": 20127,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "unstakeToGame",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 20125,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20122,
+                  "name": "player",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 20127,
+                  "src": "149:14:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 20121,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "149:7:65",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 20124,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 20127,
+                  "src": "165:14:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 20123,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "165:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "148:32:65"
+            },
+            "returnParameters": {
+              "id": 20126,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "189:0:65"
+            },
+            "scope": 20128,
+            "src": "126:64:65",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 20129,
+        "src": "25:167:65"
+      }
+    ],
+    "src": "0:193:65"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/interfaces/IStakeFromGame.sol",
+      "exportedSymbols": {
+        "IStakeFromGame": [
+          20128
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.6",
+            ".5"
+          ]
+        },
+        "id": 20113,
+        "name": "PragmaDirective",
+        "src": "0:23:65"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            20128
+          ],
+          "name": "IStakeFromGame",
+          "scope": 20129
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "668e0122",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "stakeFromGame",
+              "overrides": null,
+              "scope": 20128,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "player",
+                      "overrides": null,
+                      "scope": 20120,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 20114,
+                        "name": "ElementaryTypeName",
+                        "src": "79:7:65"
+                      }
+                    ],
+                    "id": 20115,
+                    "name": "VariableDeclaration",
+                    "src": "79:14:65"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "amount",
+                      "overrides": null,
+                      "scope": 20120,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 20116,
+                        "name": "ElementaryTypeName",
+                        "src": "95:7:65"
+                      }
+                    ],
+                    "id": 20117,
+                    "name": "VariableDeclaration",
+                    "src": "95:14:65"
+                  }
+                ],
+                "id": 20118,
+                "name": "ParameterList",
+                "src": "78:32:65"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 20119,
+                "name": "ParameterList",
+                "src": "119:0:65"
+              }
+            ],
+            "id": 20120,
+            "name": "FunctionDefinition",
+            "src": "56:64:65"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "accbc2f8",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "unstakeToGame",
+              "overrides": null,
+              "scope": 20128,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "player",
+                      "overrides": null,
+                      "scope": 20127,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 20121,
+                        "name": "ElementaryTypeName",
+                        "src": "149:7:65"
+                      }
+                    ],
+                    "id": 20122,
+                    "name": "VariableDeclaration",
+                    "src": "149:14:65"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "amount",
+                      "overrides": null,
+                      "scope": 20127,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 20123,
+                        "name": "ElementaryTypeName",
+                        "src": "165:7:65"
+                      }
+                    ],
+                    "id": 20124,
+                    "name": "VariableDeclaration",
+                    "src": "165:14:65"
+                  }
+                ],
+                "id": 20125,
+                "name": "ParameterList",
+                "src": "148:32:65"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 20126,
+                "name": "ParameterList",
+                "src": "189:0:65"
+              }
+            ],
+            "id": 20127,
+            "name": "FunctionDefinition",
+            "src": "126:64:65"
+          }
+        ],
+        "id": 20128,
+        "name": "ContractDefinition",
+        "src": "25:167:65"
+      }
+    ],
+    "id": 20129,
+    "name": "SourceUnit",
+    "src": "0:193:65"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.5+commit.f956cc89.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-09-18T03:37:02.503Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

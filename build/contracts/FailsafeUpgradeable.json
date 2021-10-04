@@ -1,0 +1,1769 @@
+{
+  "contractName": "FailsafeUpgradeable",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "FailsafeModeEnabled",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "failsafeModeActive",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "enableFailsafeMode",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.5+commit.f956cc89\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[],\"name\":\"FailsafeModeEnabled\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"enableFailsafeMode\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"failsafeModeActive\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/staking/FailsafeUpgradeable.sol\":\"FailsafeUpgradeable\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol\":{\"keccak256\":\"0xb419e68addcb82ecda3ad3974b0d2db76435ce9b08435a04d5b119a0c5d45ea5\",\"urls\":[\"bzz-raw://a85355cc4f2554f4a8d334336d66b48d616abf1d90ec3d6b602e825c6fe63f0c\",\"dweb:/ipfs/QmTJYtsKJjBy3ShAt4kEjvM6nfVS8ZAFQqE29fG16tUP8d\"]},\"@openzeppelin/contracts-upgradeable/proxy/Initializable.sol\":{\"keccak256\":\"0xd8e4eb08dcc1d1860fb347ba5ffd595242b9a1b66d49a47f2b4cb51c3f35017e\",\"urls\":[\"bzz-raw://7dbc89479d30592e82442edc38053b380f611037a5e6ceafc7bf57a7aa1f0305\",\"dweb:/ipfs/QmcdYtt56WmjeYvsFjK69FnahnAriw88VzY3XRZwXkQKKN\"]},\"@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol\":{\"keccak256\":\"0xfc5ea91fa9ceb1961023b2a6c978b902888c52b90847ac7813fe3b79524165f6\",\"urls\":[\"bzz-raw://a6b81dcc816857a9d981386f6d8de49198420ee41cdc0ecade366ab412174d03\",\"dweb:/ipfs/QmV2vznMT6m9qo3pFMAWi3Nz3UDhwesgwFxeXe6Tod3v8A\"]},\"@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol\":{\"keccak256\":\"0xbbf8a21b9a66c48d45ff771b8563c6df19ba451d63dfb8380a865c1e1f29d1a0\",\"urls\":[\"bzz-raw://062688aac76e27ab50157a9d645700cf92e3c0d51d3d860be1d2e1a0c04a87d0\",\"dweb:/ipfs/QmfXxppWAiSTeH8YNn2EtMPDgzrLeJ5rjRq8knEbje88mX\"]},\"project:/contracts/staking/FailsafeUpgradeable.sol\":{\"keccak256\":\"0x7c965e671079ad1dbcf0ad608e69c3c2efd4861a86247e9fbfa96f8a3797b36f\",\"urls\":[\"bzz-raw://46f03aadebe3f20eb9671919501384c31578208d2d3e83e1d561a82837e3b59e\",\"dweb:/ipfs/QmRFG75WwRoPzhVfssijKx8wiRmUEmw49stErKH52ECWUy\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.6.2;\n\nimport \"@openzeppelin/contracts-upgradeable/proxy/Initializable.sol\";\nimport \"@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol\";\n\nabstract contract FailsafeUpgradeable is Initializable, OwnableUpgradeable {\n    bool public failsafeModeActive;\n\n    function __Failsafe_init() internal initializer {\n        __Ownable_init();\n        __Failsafe_init_unchained();\n    }\n\n    function __Failsafe_init_unchained() internal initializer {\n        failsafeModeActive = false;\n    }\n\n    function enableFailsafeMode() public virtual onlyOwner {\n        failsafeModeActive = true;\n        emit FailsafeModeEnabled();\n    }\n\n    event FailsafeModeEnabled();\n\n    modifier normalMode {\n        require(\n            !failsafeModeActive,\n            \"This action cannot be performed while the contract is in Failsafe Mode\"\n        );\n        _;\n    }\n\n    modifier failsafeMode {\n        require(\n            failsafeModeActive,\n            \"This action can only be performed while the contract is in Failsafe Mode\"\n        );\n        _;\n    }\n}\n",
+  "sourcePath": "D:\\Work\\MEVN\\cryptoblades-main\\cryptoblades-main\\contracts\\staking\\FailsafeUpgradeable.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/staking/FailsafeUpgradeable.sol",
+    "exportedSymbols": {
+      "FailsafeUpgradeable": [
+        25705
+      ]
+    },
+    "id": 25706,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 25640,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:77"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts-upgradeable/proxy/Initializable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/proxy/Initializable.sol",
+        "id": 25641,
+        "nodeType": "ImportDirective",
+        "scope": 25706,
+        "sourceUnit": 1352,
+        "src": "25:69:77",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "id": 25642,
+        "nodeType": "ImportDirective",
+        "scope": 25706,
+        "sourceUnit": 847,
+        "src": "95:75:77",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 25643,
+              "name": "Initializable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1351,
+              "src": "213:13:77",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Initializable_$1351",
+                "typeString": "contract Initializable"
+              }
+            },
+            "id": 25644,
+            "nodeType": "InheritanceSpecifier",
+            "src": "213:13:77"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 25645,
+              "name": "OwnableUpgradeable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 846,
+              "src": "228:18:77",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_OwnableUpgradeable_$846",
+                "typeString": "contract OwnableUpgradeable"
+              }
+            },
+            "id": 25646,
+            "nodeType": "InheritanceSpecifier",
+            "src": "228:18:77"
+          }
+        ],
+        "contractDependencies": [
+          846,
+          1351,
+          2806
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 25705,
+        "linearizedBaseContracts": [
+          25705,
+          846,
+          2806,
+          1351
+        ],
+        "name": "FailsafeUpgradeable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "1265cc97",
+            "id": 25648,
+            "name": "failsafeModeActive",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 25705,
+            "src": "253:30:77",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 25647,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "253:4:77",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 25659,
+              "nodeType": "Block",
+              "src": "338:70:77",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 25653,
+                      "name": "__Ownable_init",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 745,
+                      "src": "348:14:77",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 25654,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "348:16:77",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 25655,
+                  "nodeType": "ExpressionStatement",
+                  "src": "348:16:77"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 25656,
+                      "name": "__Failsafe_init_unchained",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 25670,
+                      "src": "374:25:77",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 25657,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "374:27:77",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 25658,
+                  "nodeType": "ExpressionStatement",
+                  "src": "374:27:77"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 25660,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 25651,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 25650,
+                  "name": "initializer",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1334,
+                  "src": "326:11:77",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "326:11:77"
+              }
+            ],
+            "name": "__Failsafe_init",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 25649,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "314:2:77"
+            },
+            "returnParameters": {
+              "id": 25652,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "338:0:77"
+            },
+            "scope": 25705,
+            "src": "290:118:77",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 25669,
+              "nodeType": "Block",
+              "src": "472:43:77",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 25667,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 25665,
+                      "name": "failsafeModeActive",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 25648,
+                      "src": "482:18:77",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "66616c7365",
+                      "id": 25666,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "503:5:77",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "482:26:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 25668,
+                  "nodeType": "ExpressionStatement",
+                  "src": "482:26:77"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 25670,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 25663,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 25662,
+                  "name": "initializer",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1334,
+                  "src": "460:11:77",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "460:11:77"
+              }
+            ],
+            "name": "__Failsafe_init_unchained",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 25661,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "448:2:77"
+            },
+            "returnParameters": {
+              "id": 25664,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "472:0:77"
+            },
+            "scope": 25705,
+            "src": "414:101:77",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 25682,
+              "nodeType": "Block",
+              "src": "576:78:77",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 25677,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 25675,
+                      "name": "failsafeModeActive",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 25648,
+                      "src": "586:18:77",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 25676,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "607:4:77",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "586:25:77",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 25678,
+                  "nodeType": "ExpressionStatement",
+                  "src": "586:25:77"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 25679,
+                      "name": "FailsafeModeEnabled",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 25685,
+                      "src": "626:19:77",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 25680,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "626:21:77",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 25681,
+                  "nodeType": "EmitStatement",
+                  "src": "621:26:77"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "e2adc237",
+            "id": 25683,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 25673,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 25672,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 791,
+                  "src": "566:9:77",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "566:9:77"
+              }
+            ],
+            "name": "enableFailsafeMode",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 25671,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "548:2:77"
+            },
+            "returnParameters": {
+              "id": 25674,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "576:0:77"
+            },
+            "scope": 25705,
+            "src": "521:133:77",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 25685,
+            "name": "FailsafeModeEnabled",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 25684,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "685:2:77"
+            },
+            "src": "660:28:77"
+          },
+          {
+            "body": {
+              "id": 25694,
+              "nodeType": "Block",
+              "src": "714:164:77",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 25689,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "!",
+                        "prefix": true,
+                        "src": "745:19:77",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "id": 25688,
+                          "name": "failsafeModeActive",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 25648,
+                          "src": "746:18:77",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "5468697320616374696f6e2063616e6e6f7420626520706572666f726d6564207768696c652074686520636f6e747261637420697320696e204661696c73616665204d6f6465",
+                        "id": 25690,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "778:72:77",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_2033a41bcffa5b8f92dc907d4af8bed97aa83db30ad47a9df6bd54b87ba115ba",
+                          "typeString": "literal_string \"This action cannot be performed while the contract is in Failsafe Mode\""
+                        },
+                        "value": "This action cannot be performed while the contract is in Failsafe Mode"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_2033a41bcffa5b8f92dc907d4af8bed97aa83db30ad47a9df6bd54b87ba115ba",
+                          "typeString": "literal_string \"This action cannot be performed while the contract is in Failsafe Mode\""
+                        }
+                      ],
+                      "id": 25687,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "724:7:77",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 25691,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "724:136:77",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 25692,
+                  "nodeType": "ExpressionStatement",
+                  "src": "724:136:77"
+                },
+                {
+                  "id": 25693,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "870:1:77"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 25695,
+            "name": "normalMode",
+            "nodeType": "ModifierDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 25686,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "714:0:77"
+            },
+            "src": "694:184:77",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 25703,
+              "nodeType": "Block",
+              "src": "906:165:77",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 25698,
+                        "name": "failsafeModeActive",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 25648,
+                        "src": "937:18:77",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "5468697320616374696f6e2063616e206f6e6c7920626520706572666f726d6564207768696c652074686520636f6e747261637420697320696e204661696c73616665204d6f6465",
+                        "id": 25699,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "969:74:77",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_234b4e3fb74b9596146eb86fb0ad9d7ebcb0382e8d6bce71f4dd166b01c5b9eb",
+                          "typeString": "literal_string \"This action can only be performed while the contract is in Failsafe Mode\""
+                        },
+                        "value": "This action can only be performed while the contract is in Failsafe Mode"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_234b4e3fb74b9596146eb86fb0ad9d7ebcb0382e8d6bce71f4dd166b01c5b9eb",
+                          "typeString": "literal_string \"This action can only be performed while the contract is in Failsafe Mode\""
+                        }
+                      ],
+                      "id": 25697,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "916:7:77",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 25700,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "916:137:77",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 25701,
+                  "nodeType": "ExpressionStatement",
+                  "src": "916:137:77"
+                },
+                {
+                  "id": 25702,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1063:1:77"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 25704,
+            "name": "failsafeMode",
+            "nodeType": "ModifierDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 25696,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "906:0:77"
+            },
+            "src": "884:187:77",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 25706,
+        "src": "172:901:77"
+      }
+    ],
+    "src": "0:1074:77"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/staking/FailsafeUpgradeable.sol",
+      "exportedSymbols": {
+        "FailsafeUpgradeable": [
+          25705
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.6",
+            ".2"
+          ]
+        },
+        "id": 25640,
+        "name": "PragmaDirective",
+        "src": "0:23:77"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1352,
+          "absolutePath": "@openzeppelin/contracts-upgradeable/proxy/Initializable.sol",
+          "file": "@openzeppelin/contracts-upgradeable/proxy/Initializable.sol",
+          "scope": 25706,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 25641,
+        "name": "ImportDirective",
+        "src": "25:69:77"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 847,
+          "absolutePath": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+          "file": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+          "scope": 25706,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 25642,
+        "name": "ImportDirective",
+        "src": "95:75:77"
+      },
+      {
+        "attributes": {
+          "abstract": true,
+          "contractDependencies": [
+            846,
+            1351,
+            2806
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            25705,
+            846,
+            2806,
+            1351
+          ],
+          "name": "FailsafeUpgradeable",
+          "scope": 25706
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Initializable",
+                  "referencedDeclaration": 1351,
+                  "type": "contract Initializable"
+                },
+                "id": 25643,
+                "name": "UserDefinedTypeName",
+                "src": "213:13:77"
+              }
+            ],
+            "id": 25644,
+            "name": "InheritanceSpecifier",
+            "src": "213:13:77"
+          },
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "OwnableUpgradeable",
+                  "referencedDeclaration": 846,
+                  "type": "contract OwnableUpgradeable"
+                },
+                "id": 25645,
+                "name": "UserDefinedTypeName",
+                "src": "228:18:77"
+              }
+            ],
+            "id": 25646,
+            "name": "InheritanceSpecifier",
+            "src": "228:18:77"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "1265cc97",
+              "name": "failsafeModeActive",
+              "overrides": null,
+              "scope": 25705,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "bool",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "bool",
+                  "type": "bool"
+                },
+                "id": 25647,
+                "name": "ElementaryTypeName",
+                "src": "253:4:77"
+              }
+            ],
+            "id": 25648,
+            "name": "VariableDeclaration",
+            "src": "253:30:77"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "__Failsafe_init",
+              "overrides": null,
+              "scope": 25705,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 25649,
+                "name": "ParameterList",
+                "src": "314:2:77"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 25652,
+                "name": "ParameterList",
+                "src": "338:0:77"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 1334,
+                      "type": "modifier ()",
+                      "value": "initializer"
+                    },
+                    "id": 25650,
+                    "name": "Identifier",
+                    "src": "326:11:77"
+                  }
+                ],
+                "id": 25651,
+                "name": "ModifierInvocation",
+                "src": "326:11:77"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 745,
+                              "type": "function ()",
+                              "value": "__Ownable_init"
+                            },
+                            "id": 25653,
+                            "name": "Identifier",
+                            "src": "348:14:77"
+                          }
+                        ],
+                        "id": 25654,
+                        "name": "FunctionCall",
+                        "src": "348:16:77"
+                      }
+                    ],
+                    "id": 25655,
+                    "name": "ExpressionStatement",
+                    "src": "348:16:77"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 25670,
+                              "type": "function ()",
+                              "value": "__Failsafe_init_unchained"
+                            },
+                            "id": 25656,
+                            "name": "Identifier",
+                            "src": "374:25:77"
+                          }
+                        ],
+                        "id": 25657,
+                        "name": "FunctionCall",
+                        "src": "374:27:77"
+                      }
+                    ],
+                    "id": 25658,
+                    "name": "ExpressionStatement",
+                    "src": "374:27:77"
+                  }
+                ],
+                "id": 25659,
+                "name": "Block",
+                "src": "338:70:77"
+              }
+            ],
+            "id": 25660,
+            "name": "FunctionDefinition",
+            "src": "290:118:77"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "__Failsafe_init_unchained",
+              "overrides": null,
+              "scope": 25705,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 25661,
+                "name": "ParameterList",
+                "src": "448:2:77"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 25664,
+                "name": "ParameterList",
+                "src": "472:0:77"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 1334,
+                      "type": "modifier ()",
+                      "value": "initializer"
+                    },
+                    "id": 25662,
+                    "name": "Identifier",
+                    "src": "460:11:77"
+                  }
+                ],
+                "id": 25663,
+                "name": "ModifierInvocation",
+                "src": "460:11:77"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 25648,
+                              "type": "bool",
+                              "value": "failsafeModeActive"
+                            },
+                            "id": 25665,
+                            "name": "Identifier",
+                            "src": "482:18:77"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "66616c7365",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "false"
+                            },
+                            "id": 25666,
+                            "name": "Literal",
+                            "src": "503:5:77"
+                          }
+                        ],
+                        "id": 25667,
+                        "name": "Assignment",
+                        "src": "482:26:77"
+                      }
+                    ],
+                    "id": 25668,
+                    "name": "ExpressionStatement",
+                    "src": "482:26:77"
+                  }
+                ],
+                "id": 25669,
+                "name": "Block",
+                "src": "472:43:77"
+              }
+            ],
+            "id": 25670,
+            "name": "FunctionDefinition",
+            "src": "414:101:77"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "e2adc237",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "enableFailsafeMode",
+              "overrides": null,
+              "scope": 25705,
+              "stateMutability": "nonpayable",
+              "virtual": true,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 25671,
+                "name": "ParameterList",
+                "src": "548:2:77"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 25674,
+                "name": "ParameterList",
+                "src": "576:0:77"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 791,
+                      "type": "modifier ()",
+                      "value": "onlyOwner"
+                    },
+                    "id": 25672,
+                    "name": "Identifier",
+                    "src": "566:9:77"
+                  }
+                ],
+                "id": 25673,
+                "name": "ModifierInvocation",
+                "src": "566:9:77"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 25648,
+                              "type": "bool",
+                              "value": "failsafeModeActive"
+                            },
+                            "id": 25675,
+                            "name": "Identifier",
+                            "src": "586:18:77"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "74727565",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "true"
+                            },
+                            "id": 25676,
+                            "name": "Literal",
+                            "src": "607:4:77"
+                          }
+                        ],
+                        "id": 25677,
+                        "name": "Assignment",
+                        "src": "586:25:77"
+                      }
+                    ],
+                    "id": 25678,
+                    "name": "ExpressionStatement",
+                    "src": "586:25:77"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 25685,
+                              "type": "function ()",
+                              "value": "FailsafeModeEnabled"
+                            },
+                            "id": 25679,
+                            "name": "Identifier",
+                            "src": "626:19:77"
+                          }
+                        ],
+                        "id": 25680,
+                        "name": "FunctionCall",
+                        "src": "626:21:77"
+                      }
+                    ],
+                    "id": 25681,
+                    "name": "EmitStatement",
+                    "src": "621:26:77"
+                  }
+                ],
+                "id": 25682,
+                "name": "Block",
+                "src": "576:78:77"
+              }
+            ],
+            "id": 25683,
+            "name": "FunctionDefinition",
+            "src": "521:133:77"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "FailsafeModeEnabled"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 25684,
+                "name": "ParameterList",
+                "src": "685:2:77"
+              }
+            ],
+            "id": 25685,
+            "name": "EventDefinition",
+            "src": "660:28:77"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "name": "normalMode",
+              "overrides": null,
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 25686,
+                "name": "ParameterList",
+                "src": "714:0:77"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_2033a41bcffa5b8f92dc907d4af8bed97aa83db30ad47a9df6bd54b87ba115ba",
+                                  "typeString": "literal_string \"This action cannot be performed while the contract is in Failsafe Mode\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                -18,
+                                -18
+                              ],
+                              "referencedDeclaration": -18,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 25687,
+                            "name": "Identifier",
+                            "src": "724:7:77"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "!",
+                              "prefix": true,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 25648,
+                                  "type": "bool",
+                                  "value": "failsafeModeActive"
+                                },
+                                "id": 25688,
+                                "name": "Identifier",
+                                "src": "746:18:77"
+                              }
+                            ],
+                            "id": 25689,
+                            "name": "UnaryOperation",
+                            "src": "745:19:77"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "5468697320616374696f6e2063616e6e6f7420626520706572666f726d6564207768696c652074686520636f6e747261637420697320696e204661696c73616665204d6f6465",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"This action cannot be performed while the contract is in Failsafe Mode\"",
+                              "value": "This action cannot be performed while the contract is in Failsafe Mode"
+                            },
+                            "id": 25690,
+                            "name": "Literal",
+                            "src": "778:72:77"
+                          }
+                        ],
+                        "id": 25691,
+                        "name": "FunctionCall",
+                        "src": "724:136:77"
+                      }
+                    ],
+                    "id": 25692,
+                    "name": "ExpressionStatement",
+                    "src": "724:136:77"
+                  },
+                  {
+                    "id": 25693,
+                    "name": "PlaceholderStatement",
+                    "src": "870:1:77"
+                  }
+                ],
+                "id": 25694,
+                "name": "Block",
+                "src": "714:164:77"
+              }
+            ],
+            "id": 25695,
+            "name": "ModifierDefinition",
+            "src": "694:184:77"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "name": "failsafeMode",
+              "overrides": null,
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 25696,
+                "name": "ParameterList",
+                "src": "906:0:77"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_234b4e3fb74b9596146eb86fb0ad9d7ebcb0382e8d6bce71f4dd166b01c5b9eb",
+                                  "typeString": "literal_string \"This action can only be performed while the contract is in Failsafe Mode\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                -18,
+                                -18
+                              ],
+                              "referencedDeclaration": -18,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 25697,
+                            "name": "Identifier",
+                            "src": "916:7:77"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 25648,
+                              "type": "bool",
+                              "value": "failsafeModeActive"
+                            },
+                            "id": 25698,
+                            "name": "Identifier",
+                            "src": "937:18:77"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "5468697320616374696f6e2063616e206f6e6c7920626520706572666f726d6564207768696c652074686520636f6e747261637420697320696e204661696c73616665204d6f6465",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"This action can only be performed while the contract is in Failsafe Mode\"",
+                              "value": "This action can only be performed while the contract is in Failsafe Mode"
+                            },
+                            "id": 25699,
+                            "name": "Literal",
+                            "src": "969:74:77"
+                          }
+                        ],
+                        "id": 25700,
+                        "name": "FunctionCall",
+                        "src": "916:137:77"
+                      }
+                    ],
+                    "id": 25701,
+                    "name": "ExpressionStatement",
+                    "src": "916:137:77"
+                  },
+                  {
+                    "id": 25702,
+                    "name": "PlaceholderStatement",
+                    "src": "1063:1:77"
+                  }
+                ],
+                "id": 25703,
+                "name": "Block",
+                "src": "906:165:77"
+              }
+            ],
+            "id": 25704,
+            "name": "ModifierDefinition",
+            "src": "884:187:77"
+          }
+        ],
+        "id": 25705,
+        "name": "ContractDefinition",
+        "src": "172:901:77"
+      }
+    ],
+    "id": 25706,
+    "name": "SourceUnit",
+    "src": "0:1074:77"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.5+commit.f956cc89.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-09-18T03:37:02.660Z",
+  "devdoc": {
+    "methods": {
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

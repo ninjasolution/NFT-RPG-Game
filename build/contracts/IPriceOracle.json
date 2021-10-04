@@ -1,0 +1,501 @@
+{
+  "contractName": "IPriceOracle",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "price",
+          "type": "uint256"
+        }
+      ],
+      "name": "CurrentPriceUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "currentPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "price",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "price",
+          "type": "uint256"
+        }
+      ],
+      "name": "setCurrentPrice",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.5+commit.f956cc89\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"}],\"name\":\"CurrentPriceUpdated\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"currentPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"}],\"name\":\"setCurrentPrice\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IPriceOracle.sol\":\"IPriceOracle\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IPriceOracle.sol\":{\"keccak256\":\"0x1e8ba9bb97493d03a4a4b1ca9758b0f5809939775e06fd28668f9ddbd530c927\",\"urls\":[\"bzz-raw://e10f1429600187416e8ef752a13acae8c83562730187e65823b6f0b766c9f5c8\",\"dweb:/ipfs/QmZdH61YHA1nB3qiRwZ4kiCfMJhNC3n14WDzJtyYuRCgES\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.6.5;\n\ninterface IPriceOracle {\n    // Views\n    function currentPrice() external view returns (uint256 price);\n\n    // Mutative\n    function setCurrentPrice(uint256 price) external;\n\n    // Events\n    event CurrentPriceUpdated(uint256 price);\n}\n",
+  "sourcePath": "D:\\Work\\MEVN\\cryptoblades-main\\cryptoblades-main\\contracts\\interfaces\\IPriceOracle.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IPriceOracle.sol",
+    "exportedSymbols": {
+      "IPriceOracle": [
+        20092
+      ]
+    },
+    "id": 20093,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 20077,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".5"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:63"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 20092,
+        "linearizedBaseContracts": [
+          20092
+        ],
+        "name": "IPriceOracle",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "9d1b464a",
+            "id": 20082,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "currentPrice",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 20078,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "88:2:63"
+            },
+            "returnParameters": {
+              "id": 20081,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20080,
+                  "name": "price",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 20082,
+                  "src": "114:13:63",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 20079,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "114:7:63",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "113:15:63"
+            },
+            "scope": 20092,
+            "src": "67:62:63",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "18b20071",
+            "id": 20087,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setCurrentPrice",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 20085,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20084,
+                  "name": "price",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 20087,
+                  "src": "176:13:63",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 20083,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "176:7:63",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "175:15:63"
+            },
+            "returnParameters": {
+              "id": 20086,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "199:0:63"
+            },
+            "scope": 20092,
+            "src": "151:49:63",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 20091,
+            "name": "CurrentPriceUpdated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 20090,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20089,
+                  "indexed": false,
+                  "name": "price",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 20091,
+                  "src": "246:13:63",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 20088,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "246:7:63",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "245:15:63"
+            },
+            "src": "220:41:63"
+          }
+        ],
+        "scope": 20093,
+        "src": "25:238:63"
+      }
+    ],
+    "src": "0:264:63"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/interfaces/IPriceOracle.sol",
+      "exportedSymbols": {
+        "IPriceOracle": [
+          20092
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.6",
+            ".5"
+          ]
+        },
+        "id": 20077,
+        "name": "PragmaDirective",
+        "src": "0:23:63"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            20092
+          ],
+          "name": "IPriceOracle",
+          "scope": 20093
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "9d1b464a",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "currentPrice",
+              "overrides": null,
+              "scope": 20092,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 20078,
+                "name": "ParameterList",
+                "src": "88:2:63"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "price",
+                      "overrides": null,
+                      "scope": 20082,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 20079,
+                        "name": "ElementaryTypeName",
+                        "src": "114:7:63"
+                      }
+                    ],
+                    "id": 20080,
+                    "name": "VariableDeclaration",
+                    "src": "114:13:63"
+                  }
+                ],
+                "id": 20081,
+                "name": "ParameterList",
+                "src": "113:15:63"
+              }
+            ],
+            "id": 20082,
+            "name": "FunctionDefinition",
+            "src": "67:62:63"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "18b20071",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "setCurrentPrice",
+              "overrides": null,
+              "scope": 20092,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "price",
+                      "overrides": null,
+                      "scope": 20087,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 20083,
+                        "name": "ElementaryTypeName",
+                        "src": "176:7:63"
+                      }
+                    ],
+                    "id": 20084,
+                    "name": "VariableDeclaration",
+                    "src": "176:13:63"
+                  }
+                ],
+                "id": 20085,
+                "name": "ParameterList",
+                "src": "175:15:63"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 20086,
+                "name": "ParameterList",
+                "src": "199:0:63"
+              }
+            ],
+            "id": 20087,
+            "name": "FunctionDefinition",
+            "src": "151:49:63"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "CurrentPriceUpdated"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "price",
+                      "overrides": null,
+                      "scope": 20091,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 20088,
+                        "name": "ElementaryTypeName",
+                        "src": "246:7:63"
+                      }
+                    ],
+                    "id": 20089,
+                    "name": "VariableDeclaration",
+                    "src": "246:13:63"
+                  }
+                ],
+                "id": 20090,
+                "name": "ParameterList",
+                "src": "245:15:63"
+              }
+            ],
+            "id": 20091,
+            "name": "EventDefinition",
+            "src": "220:41:63"
+          }
+        ],
+        "id": 20092,
+        "name": "ContractDefinition",
+        "src": "25:238:63"
+      }
+    ],
+    "id": 20093,
+    "name": "SourceUnit",
+    "src": "0:264:63"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.5+commit.f956cc89.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-09-18T03:37:02.499Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
